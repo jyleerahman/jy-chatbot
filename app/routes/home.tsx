@@ -1,5 +1,8 @@
 import type { Route } from "./+types/home";
 import { Link } from "react-router-dom"
+import { authClient } from "../lib/auth-client"
+import SignIn from "./signin"
+import SignUp from "./signup"
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -9,14 +12,13 @@ export function meta({ }: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return (
-    <div>
-      <h1>helloh!</h1>
-      <nav>
-        <Link to="/login">Log In</Link> |{" "}
-        <Link to="/signup">Sign Up</Link> |{" "}
-        <Link to="/protected">Protected</Link>
-      </nav>
-    </div>
-  )
+  const { data, isPending, error } = authClient.useSession()
+  if (data) {
+    return <h1>helloooo {data?.user.email}!</h1>
+  } else {
+    return <>
+      <SignIn />
+      <SignUp />
+    </>
+  }
 }

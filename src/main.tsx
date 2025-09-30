@@ -5,7 +5,7 @@ import App from './App'
 
 import { createBrowserRouter } from "react-router-dom";
 import Home from "app/routes/home";
-import { LogIn } from "app/routes/login";
+import { LogIn } from "~/routes/signin";
 import { SignUp } from "app/routes/signup";
 import { Protected } from "app/routes/protected";
 

@@ -9,6 +9,7 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@daveyplate/better-auth-ui": "^3.2.5",
     "@react-router/node": "^7.9.2",
     "@react-router/serve": "^7.9.2",
     "@supabase/supabase-js": "^2.58.0",
