@@ -1,8 +1,6 @@
 import type { Route } from "./+types/home";
 import { Link } from "react-router-dom"
-import { LogIn } from "~/routes/login";
-import { SignUp } from "~/routes/signup";
-import { Protected } from "~/routes/protected"
+
 export function meta({ }: Route.MetaArgs) {
   return [
     { title: "JY ChatGPT" },
@@ -13,7 +11,7 @@ export function meta({ }: Route.MetaArgs) {
 export default function Home() {
   return (
     <div>
-      <h1>Welcome!</h1>
+      <h1>helloh!</h1>
       <nav>
         <Link to="/login">Log In</Link> |{" "}
         <Link to="/signup">Sign Up</Link> |{" "}

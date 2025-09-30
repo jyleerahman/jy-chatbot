@@ -1,4 +1,4 @@
-export function SignUp() {
+export default function SignUp() {
     return (
         <div>
             <h1>wooohoooooo signup pagggggeeeeee</h1>
