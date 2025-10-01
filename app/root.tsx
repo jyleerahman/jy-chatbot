@@ -7,12 +7,6 @@ import {
   ScrollRestoration,
 } from "react-router";
 
-import { AuthUIProvider } from "@daveyplate/better-auth-ui"
-import {
-  createBrowserRouter,
-  RouterProvider
-} from "react-router-dom"
-
 import type { Route } from "./+types/root";
 import "./app.css";
 

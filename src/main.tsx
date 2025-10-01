@@ -5,15 +5,13 @@ import App from './App'
 
 import { createBrowserRouter } from "react-router-dom";
 import Home from "app/routes/home";
-import { LogIn } from "~/routes/signin";
-import { SignUp } from "app/routes/signup";
-import { Protected } from "app/routes/protected";
+import SignUp from "app/routes/signup";
+import SignIn from '~/routes/signin';
 
 export const router = createBrowserRouter([
   { path: "/", element: <Home /> },
-  { path: "/login", element: <LogIn /> },
+  { path: "/signin", element: <SignIn /> },
   { path: "/signup", element: <SignUp /> },
-  { path: "/protected", element: <Protected /> },
 ]);
 
 

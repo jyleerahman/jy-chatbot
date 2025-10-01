@@ -5,11 +5,16 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+@font-face {
+  font-family: "Nexa";
+  src: url("font/Nexa-Heavy.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+  background-color: #FEFCE8;
+  font-family: "Nexa", sans-serif;
 }
