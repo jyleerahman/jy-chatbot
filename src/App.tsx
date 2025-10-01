@@ -2,6 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+<<<<<<< HEAD
+=======
+import { RouterProvider } from "react-router-dom";
+import { router } from "./main";
+
+<RouterProvider router={router} />
+>>>>>>> client-server-react-router
 
 function App() {
   const [count, setCount] = useState(0)
