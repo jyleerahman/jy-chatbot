@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { authClient } from "../lib/auth-client"
 import SignIn from "./signin"
 import SignUp from "./signup"
+import Chat from "./chat"
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -14,7 +15,7 @@ export function meta({ }: Route.MetaArgs) {
 export default function Home() {
   const { data, isPending, error } = authClient.useSession()
   if (data) {
-    return <h1>helloooo {data?.user.email}!</h1>
+    return <Chat />
   } else {
     return <>
       <SignIn />
