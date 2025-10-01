@@ -17,11 +17,12 @@ export default function Chat() {
             <div className="bg-[#68699B] w-full h-10 p-2 text-[#FFFFFD]">· Home  · About  · Help  · Corporate Services</div>
             <div className='flex'>
                 <img className='w-50 m-10 mr-0' src="../app/font/Ask_fractal.png" />
+
                 <div className="flex flex-col w-full max-w-md h-30 mx-auto p-2 pt-5">
                     <div className="text-[#CB0302] text-2xl"><p>Have a <span className='text-5xl text-bold'>Question?</span></p>
                         <p> Just type it in and click <span className='text-5xl text-bold'>Ask!</span></p></div>
                     {messages.map(message => (
-                        <div key={message.id} className="whitespace-pre-wrap border mt-4 p-2 bg-white font-mono">
+                        <div key={message.id} className="whitespace-pre-wrap border mt-4 p-2 bg-white font-mono shadow-md">
                             {message.role === 'user' ? 'User: ' : 'AI: '}
                             {message.parts.map((part, i) => {
                                 switch (part.type) {
