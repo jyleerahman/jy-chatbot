@@ -16,7 +16,7 @@ export default function Chat() {
         <div>
             <div className="bg-[#68699B] w-full h-10 p-2 text-[#FFFFFD]">· Home  · About  · Help  · Corporate Services</div>
             <div className='flex'>
-                <img className='w-50 m-10 mr-0' src="../app/font/Ask_fractal.png" />
+                <img className='w-55 m-10 mr-0' src="../app/font/Ask_fractal.png" />
 
                 <div className="flex flex-col w-full h-30 mx-auto p-10 pt-5">
                     <div className="text-[#CB0302] text-2xl"><p>Have a <span className='text-5xl text-bold'>Question?</span></p>
