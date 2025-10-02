@@ -18,7 +18,7 @@ export default function SignIn() {
                 onRequest: (ctx) => {
                 },
                 onSuccess: () => {
-                    nav("/chat")
+                    nav("/main")
                 },
                 onError: (ctx) => {
                     alert(ctx.error)
