@@ -18,18 +18,11 @@ export default function SignUp() {
             name
         }, {
             onRequest: (ctx) => {
-                //show loading
-                debugger;
-
             },
             onSuccess: (ctx) => {
-                //redirect to the dashboard or sign in page
                 nav('/home')
             },
             onError: (ctx) => {
-                // display the error message
-                debugger;
-
                 alert(ctx.error.message);
             },
         });
