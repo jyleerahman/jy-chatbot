@@ -6,6 +6,8 @@ export default [
     route("signup", "routes/signup.tsx"),
     route("/api/auth/*", "routes/api.auth.$.ts"),
     route("ai", "routes/ai.tsx"),
-    route("chat", "routes/chat.tsx")
-
+    route("chat", "routes/chat.tsx"),
+    route("main", "routes/main.tsx"),
+    route("chat/paris", "routes/chat_paris.tsx"),
+    route("chat/david", "routes/chat_david.tsx")
 ] satisfies RouteConfig;
