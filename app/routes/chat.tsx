@@ -20,7 +20,7 @@ export default function Chat() {
 
                 <div className="flex flex-col w-full max-w-md h-30 mx-auto p-2 pt-5">
                     <div className="text-[#CB0302] text-2xl"><p>Have a <span className='text-5xl text-bold'>Question?</span></p>
-                        <p> Just type it in and click <span className='text-5xl text-bold'>Ask!</span></p></div>
+                        <p> Just type it in and <span className='text-5xl text-bold'>Ask!</span></p></div>
                     {messages.map(message => (
                         <div key={message.id} className="whitespace-pre-wrap border mt-4 p-2 bg-white font-mono shadow-md">
                             {message.role === 'user' ? 'User: ' : 'AI: '}
@@ -43,12 +43,17 @@ export default function Chat() {
                         <input
                             className="fixed bottom-0 w-full max-w-md p-2 mb-8 bg-white border-t border-l border-gray-200 border-b-4 border-r-4 border-gray-500 shadow-inner bg-[#FDFDFD] font-mono"
                             value={input}
-                            placeholder="Say something..."
+                            placeholder="Ask!"
                             onChange={e => setInput(e.currentTarget.value)}
 
                         />
                     </form>
 
+                </div>
+                <div className='text-white mr-10 mt-4 text-2xl drop-shadow-[0_1px_1.2px_rgba(0,0,0,0.8)] font-extrabold'>
+                    <p>PERSONAL</p>
+                    <p className='text-[#68699B]'>Andrew</p>
+                    <p>is <span className='text-yellow-300 underline'>here</span>﹗🛎️</p>
                 </div>
             </div>
         </div>
