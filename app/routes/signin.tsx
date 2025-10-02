@@ -29,8 +29,8 @@ export default function SignIn() {
 
     return (
         <>
-            <div className="m-5 text-xl border-solid border-2 p-3 w-130">
-                <h1>👇Sign in👇</h1>
+            <div className="whitespace-pre-wrap border mt-4 p-2 bg-white shadow-md m-5 text-xl border-solid border-2 p-3 h-60">
+                <h1 className="font-extrabold">Sign in</h1>
                 <Form onSubmit={signIn} className="flex flex-col w-100">
                     <label>Email:</label>
                     <input

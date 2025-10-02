@@ -29,8 +29,8 @@ export default function SignUp() {
     }
 
     return (
-        <div className="m-5 text-xl border-solid border-2 p-3 w-130">
-            <h2>✍️Sign Up✍️</h2>
+        <div className="whitespace-pre-wrap border mt-4 p-2 bg-white shadow-md m-5 text-xl border-solid border-2 p-3 h-60">
+            <h2>Sign Up</h2>
             <Form onSubmit={signUp} className="flex flex-col w-100">
                 <input
                     type="text"
@@ -53,7 +53,7 @@ export default function SignUp() {
                     placeholder="Password"
                     className="border-solid border-1 m-1"
                 />
-                <button type="submit" className="border-solid border-1 pl-1 pr-1">
+                <button type="submit" className="text-[#CB0302] font-extrabold ml-5 border rounded-full">
                     Sign Up
                 </button>
             </Form>

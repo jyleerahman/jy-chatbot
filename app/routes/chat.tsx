@@ -18,7 +18,7 @@ export default function Chat() {
             <div className='flex'>
                 <img className='w-50 m-10 mr-0' src="../app/font/Ask_fractal.png" />
 
-                <div className="flex flex-col w-full max-w-md h-30 mx-auto p-2 pt-5">
+                <div className="flex flex-col w-full h-30 mx-auto p-10 pt-5">
                     <div className="text-[#CB0302] text-2xl"><p>Have a <span className='text-5xl text-bold'>Question?</span></p>
                         <p> Just type it in and <span className='text-5xl text-bold'>Ask!</span></p></div>
                     {messages.map(message => (
@@ -41,7 +41,7 @@ export default function Chat() {
                         }}
                     >
                         <input
-                            className="fixed bottom-0 w-full max-w-md p-2 mb-8 bg-white border-t border-l border-gray-200 border-b-4 border-r-4 border-gray-500 shadow-inner bg-[#FDFDFD] font-mono"
+                            className="fixed bottom-0 w-245 p-2 mb-8 bg-white border-t border-l border-gray-200 border-b-4 border-r-4 border-gray-500 shadow-inner bg-[#FDFDFD] font-mono"
                             value={input}
                             placeholder="Ask!"
                             onChange={e => setInput(e.currentTarget.value)}
