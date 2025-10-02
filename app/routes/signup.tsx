@@ -18,52 +18,48 @@ export default function SignUp() {
             name
         }, {
             onRequest: (ctx) => {
-                //show loading
-                debugger;
-
             },
             onSuccess: (ctx) => {
-                //redirect to the dashboard or sign in page
                 nav('/home')
             },
             onError: (ctx) => {
-                // display the error message
-                debugger;
-
                 alert(ctx.error.message);
             },
         });
     }
 
     return (
-        <div className="m-5 text-xl border-solid border-2 p-3 w-130">
-            <h2>✍️Sign Up✍️</h2>
-            <Form onSubmit={signUp} className="flex flex-col w-100">
-                <input
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Name"
-                    className="border-solid border-1 m-1"
-                />
-                <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Email"
-                    className="border-solid border-1 m-1"
-                />
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-                    className="border-solid border-1 m-1"
-                />
-                <button type="submit" className="border-solid border-1 pl-1 pr-1">
-                    Sign Up
-                </button>
-            </Form>
+        <div className="flex flex-col ml-5">
+            <h2 className="text-blue-700 underline">Sign Up:</h2>
+            <div className="whitespace-pre-wrap border mt-4 p-2 bg-white shadow-md text-base border-solid border-2 p-3 h-45">
+
+                <Form onSubmit={signUp} className="flex flex-col w-100">
+                    <input
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Name"
+                        className="border-solid border-1 m-1"
+                    />
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Email"
+                        className="border-solid border-1 m-1"
+                    />
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Password"
+                        className="border-solid border-1 m-1"
+                    />
+                    <button type="submit" className="text-[#CB0302] font-extrabold ml-5 mt-5 border rounded-full">
+                        Sign Up
+                    </button>
+                </Form>
+            </div>
         </div>
     )
 }

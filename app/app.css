@@ -1,20 +1,14 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
 @font-face {
-  font-family: "Nexa";
-  src: url("font/Nexa-Heavy.ttf") format("ttf");
-  font-weight: 700;
+  font-family: 'Montserrat';
+  src: url('./font/Montserrat.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
 
 html,
 body {
-  background-color: #FEFCE8;
-  font-family: "Nexa", sans-serif;
+  background-color: #fcf8de;
+  font-family: "Montserrat";
 }
