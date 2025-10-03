@@ -3,12 +3,15 @@
 import { useChat } from '@ai-sdk/react';
 import { DefaultChatTransport } from 'ai';
 import { useState } from 'react';
+import { useParams } from 'react-router';
 
 export default function Chat() {
     const [input, setInput] = useState('');
+    const { chatId } = useParams()
     const { messages, sendMessage } = useChat({
         transport: new DefaultChatTransport({
-            api: 'ai',
+            api: '/ai',
+            body: { chatId }
         })
     });
 
@@ -16,7 +19,9 @@ export default function Chat() {
         <div>
             <div className="bg-[#68699B] w-full h-10 p-2 pl-3 text-[#FFFFFD]"> Home | About | Help | Corporate Services</div>
             <div className='flex'>
-                <img className='w-70 m-10 mr-0' src="../app/font/andrew.png" />
+                {(chatId === "1") ? <img className='w-70 m-10 mr-0' src="../app/font/andrew.png" /> :
+                    (chatId === "2") ? <img className='w-70 m-10 mr-0' src="../app/font/paris.png" /> :
+                        <img className='w-70 m-10 mr-0' src="../app/font/david.png" />}
 
                 <div className="flex flex-col w-full h-30 mx-auto p-10 pt-5">
                     <div className="text-[#CB0302] text-2xl"><p>Have a <span className='text-5xl text-bold'>Question?</span></p>
@@ -52,7 +57,9 @@ export default function Chat() {
                 </div>
                 <div className='text-white mr-10 mt-4 text-2xl drop-shadow-[0_1px_1.2px_rgba(0,0,0,0.8)] font-extrabold'>
                     <p>PERSONAL</p>
-                    <p className='text-[#68699B]'>Andrew</p>
+                    {(chatId === "1") ? <p className='text-[#68699B]'>Andrew</p> :
+                        (chatId === "2") ? <p className='text-[#68699B]'>Paris</p> :
+                            <p className='text-[#68699B]'>Paris</p>}
                     <p>is <span className='text-yellow-300 underline'>here</span>﹗🛎️</p>
                 </div>
             </div>
