@@ -10,7 +10,7 @@ export default function Chat() {
     const { chatId } = useParams()
     const { messages, sendMessage } = useChat({
         transport: new DefaultChatTransport({
-            api: 'ai',
+            api: '/ai',
             body: { chatId }
         })
     });
