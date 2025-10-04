@@ -15,6 +15,7 @@ export async function action({ request }: ActionFunctionArgs) {
         model: openai("gpt-4.1-mini"),
         system: system,
         messages: convertToModelMessages(messages),
+        temperature: 0.5
     });
 
     return result.toUIMessageStreamResponse();

@@ -69,7 +69,7 @@ export default function Chat() {
                             </div>
                         </div>
 
-                        {/* messages: fills remaining height and scrolls */}
+                        {/* messages */}
                         <div id="messages" className="flex-1 overflow-y-auto mt-10 w-[80%] space-y-4">
                             {messages.map((message) => (
                                 <div
@@ -88,9 +88,10 @@ export default function Chat() {
                                 </div>
                             ))}
                             <div id="messages-end" />
+                            <div ref={bottomRef} />
                         </div>
 
-                        {/* input: pinned at bottom, never scrolls */}
+                        {/* input */}
                         <div className="shrink-0 w-[80%] bg-white mb-5 p-2 border-5 border-[#BF9F39] shadow-inner">
                             <form
                                 onSubmit={(e) => {
@@ -109,7 +110,6 @@ export default function Chat() {
                                     onChange={(e) => setInput(e.currentTarget.value)}
                                 />
                             </form>
-                            <div ref={bottomRef} />
                         </div>
                     </div>
                 </div>
