@@ -103,7 +103,7 @@ export default function Chat() {
                                 }}
                             >
                                 <input
-                                    className="w-full p-2 bg-[#FDFDFD] font-mono"
+                                    className="w-full p-2 bg-[#FDFDFD] font-mono outline-none"
                                     value={input}
                                     placeholder="Ask!"
                                     onChange={(e) => setInput(e.currentTarget.value)}
